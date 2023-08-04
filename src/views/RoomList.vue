@@ -63,8 +63,8 @@ const data = computed(() =>
 const _data = ref<any>([])
 const search = ref('')
 onMounted(async () => {
-    _data.value = await fetch('http://localhost:3001/room').then((e) =>
-        e.json()
+    _data.value = await fetch('https://bad-boy-service.vercel.app/room').then(
+        (e) => e.json()
     )
     console.log(_data.value)
 })

@@ -10,7 +10,7 @@ export type PluginInstance = ReturnType<typeof $polling>
 export const pollingPluginSymbol: InjectionKey<PluginInstance> =
     Symbol('$polling')
 export function $polling() {
-    const path = 'http://localhost:3001/pollingGetData'
+    const path = 'https://bad-boy-service.vercel.app/pollingGetData'
     let interval: any = null
     const event: any = []
     function addEventListening(fn: Function) {
