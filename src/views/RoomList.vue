@@ -44,7 +44,10 @@
                     </v-card-text>
                 </v-card>
             </div>
-            <div v-else>NoData</div>
+            <div v-else>
+                NoData
+                {{ _data }}
+            </div>
         </div>
     </div>
 </template>
