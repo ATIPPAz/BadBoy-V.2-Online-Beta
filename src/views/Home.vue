@@ -446,7 +446,7 @@ async function randomTeam() {
         winStreak: winStreak.value,
         courtNumber: courtNumber.value,
     }
-    const data = await fetch('https://bad-boy-service.vercel.app/room', {
+    const data = await fetch('http://localhost:3001/room', {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         headers: {
             'Content-Type': 'application/json',

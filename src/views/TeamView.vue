@@ -84,10 +84,12 @@ onMounted(async () => {
         const roomId = route.params.roomId
         if (!roomId) throw new Error('')
 
-        const { data, id } = await fetch(
-            'https://bad-boy-service.vercel.app/room/' + roomId
+        const { roomData: data, _id } = await fetch(
+            'http://localhost:3001/room/' + roomId
         ).then((e) => e.json())
+        console.log(data)
         if (!data) throw new Error('')
+
         roomName.value = data.roomName
         courtNumber.value = data.courtNumber
         teamLimit.value = data.teamLimit
